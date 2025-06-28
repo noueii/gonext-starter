@@ -1,9 +1,9 @@
 .EXPORT_ALL_VARIABLES:
-POSTGRES_CONTAINER_NAME = gonuxt-postgres
-DB_NAME = gonuxt
+POSTGRES_CONTAINER_NAME = gonext-postgres
+DB_NAME = gonext
 DB_DRIVER = postgres
 DB_USER = root
-DB_USER_PASSWORD = gonuxtsecret
+DB_USER_PASSWORD = gonextsecret
 DB_HOST = localhost
 DB_INTERNAL_PORT = 5432
 DB_EXTERNAL_PORT = 5432
