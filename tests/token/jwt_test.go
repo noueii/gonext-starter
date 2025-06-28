@@ -6,8 +6,8 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/google/uuid"
-	"github.com/noueii/gonuxt-starter/internal/token"
-	"github.com/noueii/gonuxt-starter/internal/util"
+	"github.com/noueii/gonext-starter/internal/token"
+	"github.com/noueii/gonext-starter/internal/util"
 	"github.com/stretchr/testify/require"
 )
 

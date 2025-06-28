@@ -5,7 +5,7 @@ package pb;
 import "user.proto";
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/noueii/gonuxt-starter/internal/pb";
+option go_package = "github.com/noueii/gonext-starter/internal/pb";
 
 
 message LoginUserRequest {

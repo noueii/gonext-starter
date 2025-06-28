@@ -9,7 +9,7 @@ import "rpc_verify_token.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 
-option go_package = "github.com/noueii/gonuxt-starter/internal/pb";
+option go_package = "github.com/noueii/gonext-starter/internal/pb";
 
 
 

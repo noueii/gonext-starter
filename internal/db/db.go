@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"embed"
 
-	"github.com/noueii/gonuxt-starter/internal/util"
+	"github.com/noueii/gonext-starter/internal/util"
 	"github.com/pressly/goose/v3"
 )
 

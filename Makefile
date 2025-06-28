@@ -55,7 +55,7 @@ tools:
 	done
 
 build: 
-	go build -o ./bin/gonuxt-starter ./cmd/gonuxt-starter
+	go build -o ./bin/gonext-starter ./cmd/gonext-starter
 
 godeps:
 	go install github.com/sqlc-dev/sqlc/cmd/sqlc@latest

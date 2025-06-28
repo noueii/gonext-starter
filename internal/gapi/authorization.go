@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/noueii/gonuxt-starter/internal/token"
+	"github.com/noueii/gonext-starter/internal/token"
 	"google.golang.org/grpc/metadata"
 )
 

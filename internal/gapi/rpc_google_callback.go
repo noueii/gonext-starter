@@ -8,9 +8,9 @@ import (
 	"io"
 	"net/http"
 
-	db "github.com/noueii/gonuxt-starter/internal/db/out"
-	"github.com/noueii/gonuxt-starter/internal/pb"
-	"github.com/noueii/gonuxt-starter/internal/util"
+	db "github.com/noueii/gonext-starter/internal/db/out"
+	"github.com/noueii/gonext-starter/internal/pb"
+	"github.com/noueii/gonext-starter/internal/util"
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
 	"google.golang.org/grpc/codes"

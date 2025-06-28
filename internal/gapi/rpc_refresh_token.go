@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/noueii/gonuxt-starter/internal/pb"
-	"github.com/noueii/gonuxt-starter/internal/util"
+	"github.com/noueii/gonext-starter/internal/pb"
+	"github.com/noueii/gonext-starter/internal/util"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"

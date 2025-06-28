@@ -7,7 +7,7 @@ import "rpc_create_user.proto";
 import "rpc_login_user.proto";
 import "google/api/annotations.proto";
 
-option go_package = "github.com/noueii/gonuxt-starter/internal/pb";
+option go_package = "github.com/noueii/gonext-starter/internal/pb";
 
 
 

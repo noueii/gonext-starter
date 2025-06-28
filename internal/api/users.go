@@ -9,9 +9,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	db "github.com/noueii/gonuxt-starter/internal/db/out"
-	"github.com/noueii/gonuxt-starter/internal/util"
-	"github.com/noueii/gonuxt-starter/internal/validator"
+	db "github.com/noueii/gonext-starter/internal/db/out"
+	"github.com/noueii/gonext-starter/internal/util"
+	"github.com/noueii/gonext-starter/internal/validator"
 )
 
 type createUserRequest struct {

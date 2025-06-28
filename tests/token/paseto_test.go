@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/noueii/gonuxt-starter/internal/token"
-	"github.com/noueii/gonuxt-starter/internal/util"
+	"github.com/noueii/gonext-starter/internal/token"
+	"github.com/noueii/gonext-starter/internal/util"
 
 	//"github.com/o1egl/paseto"
 	"github.com/stretchr/testify/require"

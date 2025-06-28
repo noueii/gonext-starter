@@ -1,8 +1,8 @@
 package gapi
 
 import (
-	db "github.com/noueii/gonuxt-starter/internal/db/out"
-	"github.com/noueii/gonuxt-starter/internal/pb"
+	db "github.com/noueii/gonext-starter/internal/db/out"
+	"github.com/noueii/gonext-starter/internal/pb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 

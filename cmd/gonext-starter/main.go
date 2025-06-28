@@ -8,10 +8,10 @@ import (
 	"syscall"
 
 	_ "github.com/lib/pq"
-	dbrun "github.com/noueii/gonuxt-starter/internal/db"
-	db "github.com/noueii/gonuxt-starter/internal/db/out"
-	"github.com/noueii/gonuxt-starter/internal/gapi"
-	"github.com/noueii/gonuxt-starter/internal/util"
+	dbrun "github.com/noueii/gonext-starter/internal/db"
+	db "github.com/noueii/gonext-starter/internal/db/out"
+	"github.com/noueii/gonext-starter/internal/gapi"
+	"github.com/noueii/gonext-starter/internal/util"
 
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"

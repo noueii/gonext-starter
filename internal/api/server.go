@@ -7,9 +7,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	db "github.com/noueii/gonuxt-starter/internal/db/out"
-	"github.com/noueii/gonuxt-starter/internal/token"
-	"github.com/noueii/gonuxt-starter/internal/util"
+	db "github.com/noueii/gonext-starter/internal/db/out"
+	"github.com/noueii/gonext-starter/internal/token"
+	"github.com/noueii/gonext-starter/internal/util"
 	"github.com/rs/zerolog/log"
 	"golang.org/x/sync/errgroup"
 )

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/noueii/gonuxt-starter/internal/pb"
+	"github.com/noueii/gonext-starter/internal/pb"
 	"golang.org/x/oauth2"
 )
 

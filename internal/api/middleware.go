@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/noueii/gonuxt-starter/internal/token"
+	"github.com/noueii/gonext-starter/internal/token"
 )
 
 const (

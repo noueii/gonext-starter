@@ -3,8 +3,8 @@ package gapi
 import (
 	"context"
 
-	"github.com/noueii/gonuxt-starter/internal/pb"
-	"github.com/noueii/gonuxt-starter/internal/util"
+	"github.com/noueii/gonext-starter/internal/pb"
+	"github.com/noueii/gonext-starter/internal/util"
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 

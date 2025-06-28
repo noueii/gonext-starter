@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/noueii/gonuxt-starter/internal/pb"
-	"github.com/noueii/gonuxt-starter/internal/util"
+	"github.com/noueii/gonext-starter/internal/pb"
+	"github.com/noueii/gonext-starter/internal/util"
 )
 
 func (server *Server) Logout(ctx context.Context, req *pb.LogoutRequest) (*pb.LogoutResponse, error) {

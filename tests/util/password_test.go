@@ -3,7 +3,7 @@ package util
 import (
 	"testing"
 
-	"github.com/noueii/gonuxt-starter/internal/util"
+	"github.com/noueii/gonext-starter/internal/util"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/crypto/bcrypt"
 )
