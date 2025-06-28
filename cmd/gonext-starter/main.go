@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"database/sql"
+	"fmt"
 	"os"
 	"os/signal"
 	"syscall"
@@ -43,6 +44,9 @@ func main() {
 	if err != nil {
 		log.Fatal().Err(err).Msg("could not load config")
 	}
+
+	fmt.Println(cfg.DbDriver)
+	fmt.Println(cfg.DbURL)
 
 	conn, err := sql.Open(cfg.DbDriver, cfg.DbURL)
 

@@ -31,7 +31,7 @@ test:
 	go test -v -cover ./...
 
 server: 
-	go run cmd/gonuxt-starter/main.go
+	go run cmd/gonext-starter/main.go
 
 proto:
 	rm -f internal/pb/*.go
