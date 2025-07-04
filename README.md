@@ -1,71 +1,114 @@
-# gonuxt-starter
+# Gonext Starter
 
-## Installing
+A full-stack starter template with Go backend and Next.js frontend, featuring authentication, database integration, and API documentation.
 
-### Step 1. Docker postgres image (optional)
+## Features
 
-*This step assumes you have docker already installed on your machine*</br>
+- **Backend**: Go with Gin web framework
+- **Frontend**: Next.js with TypeScript and Tailwind CSS
+- **Database**: PostgreSQL with migrations
+- **Authentication**: JWT and PASETO token support
+- **API Documentation**: OpenAPI/Swagger
+- **State Management**: Redux Toolkit with RTK Query
+- **Containerization**: Docker support
 
-I recommend outsourcing the database and skipping to step 3.</br>
-Self hosting a database in a production environment is easier said than done, even if everything seems to be working properly :)
-
-
-<h4>1. Pulling the latest postgres image for docker</h4>
+## Project Structure
 
 ```
-docker pull postgres:latest
+.
+├── api/                  # API documentation and specs
+├── cmd/                  # Main application entry point
+├── internal/             # Core application code
+│   ├── api/             # API handlers
+│   ├── db/              # Database code and migrations
+│   ├── gapi/            # gRPC API implementation
+│   ├── pb/              # Generated protobuf code
+│   ├── proto/           # Protocol buffer definitions
+│   ├── token/           # Token management
+│   └── util/            # Utility functions
+├── web/                 # Frontend application
+│   ├── public/          # Static files
+│   ├── src/             # Source code
+│   │   ├── app/        # Next.js app directory
+│   │   ├── store/      # Redux store and API client
+│   │   └── providers/  # React providers
+│   └── package.json    # Frontend dependencies
+├── .env.example        # Example environment variables
+├── docker-compose.yml  # Docker Compose configuration
+└── Makefile           # Common tasks
 ```
 
-<h4>2. Running your image on a container</h4>
+## Getting Started
 
-**Syntax**
+### Prerequisites
+
+- Go 1.24+
+- Node.js 18+
+- PostgreSQL 14+
+- Docker (optional)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/gonext-starter.git
+   cd gonext-starter
+   ```
+
+2. Set up the database:
+   ```bash
+   # Start PostgreSQL with Docker
+   docker-compose up -d postgres
+   
+   # Create and migrate database
+   make createdb
+   make migrateup
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
+
+4. Start the backend:
+   ```bash
+   make server
+   ```
+
+5. Start the frontend:
+   ```bash
+   cd web
+   npm install
+   npm run dev
+   ```
+
+## Development
+
+### Generating API Client
+
+After making changes to the API, update the frontend client:
+
+```bash
+cd web
+npm run api:generate
 ```
-docker run --name [CONTAINER_NAME] -p [INTERNAL PORT:EXTERNAL PORT] -e POSTGRES_USER=[DATABASE USER NAME] -e POSTGRES_PASSWORD=[DATABASE USER PASSWORD] -d postgres
-```
-**My defaults**
-```
-docker run --name gonuxt-postgres -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=gonuxtsecret -d postgres
-```
 
-<h4>3. Connecting with your database</h5>
+### Running Tests
 
-<p>I recommend using psql, you would need to <a href=https://www.postgresql.org/download>install postgres</a> on your local machine.</p>
+```bash
+# Run backend tests
+make test
 
-**Syntax**
-```
-psql [DATABASE DRIVER]://[DATABASE USER]:[DATABASE PASSWORD]@[IP ADDRESS]:[PORT]
+# Run frontend tests
+cd web
+npm test
 ```
 
-**My defaults**
-```
-psql postgres://root:gonuxtsecret@localhost:5432
-```
+## API Documentation
 
-If your terminall connects to the database shell, it means you have completed the setup correctly.<br/>
-You can exit out of the shell with the command <code>\q</code>
+API documentation is available at `http://localhost:8080/swagger/index.html` when the backend is running.
 
-<h4>4. Creating the database for our project</h4>
+## License
 
-<p>I created some Makefiles to make the setup a bit more intuitive.</p>
-<p>You can find the commands ran inside the Makefiles at the root at the project.</p>
-<p>In order to execute them, you will need <a href=https://www.gnu.org/software/make/> gnu make </a> </p>
-<p>Based on your setup, you might want to modify the variables available inside <code>Makefile.variable</code></p>
-<p>After you are done modifying the variables, you can run the command 
-  
-  ```
-  make createdb
-  ```
-</p>
-<p>This should create a database with the name set up inside the <code>Makefile.variable</code></p>
-
-<h4>5. Creating migrations</h4>
-
-I am using <a href=https://docs.sqlc.dev/en/latest/overview/install.html>sqlc</a> and <a href=https://pressly.github.io/goose/installation/>goose</a> for this project. Make sure to install them.
-I created a folder called <code>db</code> with 3 other folders inside it. 
-<ul>
-  <li><code>db/schema</code> - we write the migrations we want to apply here</li>
-  <li><code>db/queries</code> - we write the queries for our database here</li>
-  <li><code>db/out</code> - the output folder where sqlc generates our go code</li>
-</ul>
-<p></p>You can find the syntax for writing migrations and queries on the official goose website. 
-I created some files for our small use case. </p>
+[MIT](LICENSE)

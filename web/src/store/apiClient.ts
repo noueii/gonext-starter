@@ -42,6 +42,9 @@ const injectedRtkApi = api.injectEndpoints({
     authLogout: build.query<AuthLogoutApiResponse, AuthLogoutApiArg>({
       query: () => ({ url: `/v1/auth/logout` }),
     }),
+    goNuxtMe: build.query<GoNuxtMeApiResponse, GoNuxtMeApiArg>({
+      query: () => ({ url: `/v1/me` }),
+    }),
     goNuxtRefreshToken: build.query<
       GoNuxtRefreshTokenApiResponse,
       GoNuxtRefreshTokenApiArg
@@ -90,6 +93,9 @@ export type AuthGoogleCallbackApiArg = {
 export type AuthLogoutApiResponse =
   /** status 200 A successful response. */ PbLogoutResponse;
 export type AuthLogoutApiArg = void;
+export type GoNuxtMeApiResponse =
+  /** status 200 A successful response. */ PbMeResponse;
+export type GoNuxtMeApiArg = void;
 export type GoNuxtRefreshTokenApiResponse =
   /** status 200 A successful response. */ PbRefreshTokenResponse;
 export type GoNuxtRefreshTokenApiArg = void;
@@ -143,6 +149,11 @@ export type PbGoogleCallbackResponse = {
   jwt_token?: string;
 };
 export type PbLogoutResponse = object;
+export type PbMeResponse = {
+  id?: string;
+  expires_at?: string;
+  user?: PbUser;
+};
 export type PbSession = {
   id?: string;
   expires_at?: string;
@@ -173,6 +184,7 @@ export const {
   useAuthGoogleLoginQuery,
   useAuthGoogleCallbackQuery,
   useAuthLogoutQuery,
+  useGoNuxtMeQuery,
   useGoNuxtRefreshTokenQuery,
   useGoNuxtVerifyTokenQuery,
   useGoNuxtUpdateUserMutation,
